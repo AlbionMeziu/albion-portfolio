@@ -1,0 +1,350 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #05070f;
+  color: #e5e7eb;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  overflow-x: hidden;
+}
+
+/* smooth transitions everywhere */
+* {
+  transition: all 0.25s ease;
+}
+
+/* better typography spacing */
+p {
+  line-height: 1.7;
+  opacity: 0.85;
+}
+
+.glass-navbar {
+  background: rgba(10, 15, 30, 0.6);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s;
+}
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #6a11cb;
+}
+
+/* NAV LINKS */
+.nav-link {
+  color: rgba(255,255,255,0.7) !important;
+  position: relative;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+/* HOVER EFFECT (underline glow) */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  color: white !important;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ACTIVE LINK */
+.active-link {
+  color: white !important;
+  font-weight: 600;
+}
+
+.active-link::after {
+  width: 100% !important;
+}
+
+/* CONTACT BUTTON STYLE */
+.nav-btn {
+  padding: 8px 18px;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: white !important;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #6a11cb;
+}
+
+/* HERO */
+.hero {
+  background: radial-gradient(circle at top, #1a1f3c, #05070f);
+  color: white;
+  overflow: hidden;
+}
+
+/* LEFT */
+.hero-left {
+  padding-top: 60px;
+}
+
+.hero-title {
+  font-size: 55px;
+  font-weight: 800;
+}
+
+.hero-title span {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* BADGE */
+.badge-box {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255,255,255,0.08);
+  padding: 8px 15px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background: #00ff88;
+  border-radius: 50%;
+  margin-right: 8px;
+  box-shadow: 0 0 10px #00ff88;
+}
+
+/* TEXT */
+.hero-desc {
+  opacity: 0.7;
+  margin-top: 15px;
+  max-width: 500px;
+}
+
+/* BUTTONS */
+.hero-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn-primary-glow {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  padding: 12px 25px;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-primary-glow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #6a11cb;
+}
+
+.btn-outline-glow {
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 12px 25px;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-outline-glow:hover {
+  border-color: #6a11cb;
+  box-shadow: 0 0 15px #6a11cb;
+}
+
+/* RIGHT CARD */
+.hero-card {
+  position: relative;
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  padding: 40px;
+  backdrop-filter: blur(15px);
+  transform: rotate(3deg);
+  transition: 0.3s;
+}
+
+.hero-card:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.card-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(106,17,203,0.4), transparent);
+  filter: blur(40px);
+  z-index: -1;
+}
+
+.mini-stats {
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.mini-stats div {
+  margin-bottom: 8px;
+}
+
+/* GLASS CARD */
+.glass-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+}
+
+/* SKILLS */
+.skill-card {
+  background: rgba(255,255,255,0.08);
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255,255,255,0.15);
+}
+
+/* PROJECT */
+.project-card {
+  background: linear-gradient(135deg, #111827, #1f2937);
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+/* SECTION */
+.section {
+  padding: 100px 0;
+}
+
+.dark {
+  background: #05070f;
+}
+
+/* SOCIAL */
+.socials i {
+  font-size: 23px;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.socials i:hover {
+  color: #6a11cb;
+  transform: scale(1.2);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.skill-card {
+  transition: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.skill-card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(106,17,203,0.3);
+}
+
+
+.btn-primary-glow,
+.btn-outline-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary-glow::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background: rgba(255,255,255,0.2);
+  top: 0;
+  left: -120px;
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+
+.btn-primary-glow:hover::before {
+  left: 200%;
+}
+
+
+
+.hero-card,
+.project-card,
+.skill-card {
+  will-change: transform;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-card:hover,
+.project-card:hover,
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+
+.bg-glow,
+.bg-glow-2 {
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.bg-glow {
+  background: #6a11cb;
+  top: -200px;
+  left: -200px;
+}
+
+.bg-glow-2 {
+  background: #2575fc;
+  bottom: -200px;
+  right: -200px;
+}
+
